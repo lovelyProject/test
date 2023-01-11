@@ -18,7 +18,13 @@ export default {
   top: 0
   left: 0
   &__photo
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
   &__description
     max-width: 90rem
     font-size: 2rem
+    display: flex
+    flex-wrap: wrap
 </style>

@@ -9,6 +9,22 @@
         :current-slide="currentSlide"
         :index="index"
       />
+      <!-- <a class="carousel__btn">
+        <span>Искать промокод</span>
+        <svg
+          width="28"
+          height="5"
+          viewBox="0 0 28 5"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0.370911 2.8553L26.7406 2.8553" stroke="#333333" />
+          <path
+            d="M25.0246 4.54921L26.7453 2.8285L25.0246 1.13766"
+            stroke="#333333"
+          />
+        </svg>
+      </a> -->
       <vCarouselControls />
     </div>
   </div>
@@ -54,7 +70,11 @@ export default {
         flex-wrap: wrap
         position: relative
         width: 90rem
-        min-height: 38.7rem
+        padding-top: 32rem
+        margin-top: 21.4rem
+    &__btn
+        padding: 1.9rem 2.7rem 1.9rem 1.3rem
+        background-color: #fff
 .carousel__button
     width: 4rem
     height: 4rem

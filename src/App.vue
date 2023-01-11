@@ -2,7 +2,7 @@
   <div class="main-wrapper">
     <div class="wrapper">
       <header class="header">
-        <div class="header__menu">
+        <div class="header__burger">
           <svg
             viewBox="0 0 22 17"
             fill="none"
@@ -14,10 +14,18 @@
             />
           </svg>
         </div>
-        <div class="header__slider">
-          <img src="@/assets/image/Vertical-menu.svg" alt="" />
-        </div>
+        <nav class="header__vertical-menu">
+          <ul class="vertical-menu-list">
+            <li class="vertical-menu-list__item">&nbsp;</li>
+            <li class="vertical-menu-list__item">&nbsp;</li>
+            <li class="vertical-menu-list__item">
+              <span class="bold">03</span>&nbsp;&nbsp;&nbsp;&nbsp;Подсказки
+            </li>
+            <li class="vertical-menu-list__item">&nbsp;</li>
+          </ul>
+        </nav>
         <div class="header__info">
+          <span>Листайте вниз</span>
           <svg
             viewBox="0 0 6 64"
             fill="none"
@@ -29,7 +37,6 @@
               stroke="#333333"
             />
           </svg>
-          <span>Скрольте вниз</span>
         </div>
       </header>
       <main class="main">
@@ -41,11 +48,16 @@
           <Carousel :slides="slides" />
         </div>
       </main>
+      <footer class="footer">
+        <div class="footer-container">
+          <span class="footer__link">hd.kinopoisk.ru</span>
+        </div>
+      </footer>
     </div>
   </div>
 </template>
 <script>
-import Carousel from "./components/v-carousel.vue";
+import Carousel from "./components/carousel/v-carousel.vue";
 
 export default {
   name: "vApp",
@@ -56,40 +68,38 @@ export default {
     return {
       slides: [
         {
-          image: "./assets/slides/racer.png",
+          image: "racer.png",
           text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
-          text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
+          image: "racer.png",
+          text: "Для примера мы показали вам его лицо2.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
-          text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
+          image: "racer.png",
+          text: "Для примера мы показали вам его лицо3.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
-          text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
+          image: "racer.png",
+          text: "Для примера мы показали вам его лицо4.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
-          text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
+          image: "racer.png",
+          text: "Для примера мы показали вам его лицо5.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
-          text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
+          image: "racer.png",
+          text: "Для примера мы показали вам его лицо6.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
-          text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
+          image: "racer.png",
+          text: "Для примера мы показали вам его лицо7.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
         {
-          image: "./assets/slides/racer.png",
+          image: "racer.png",
           text: "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
         },
       ],
-      slideText:
-        "Для примера мы показали вам его лицо.  В первой серии он прячется в подвале за мониторами, и пусть борода не собьёт вас с толку. Найдите героя и нажмите  на паузу — ему не терпится отдать вам промокод.",
     };
   },
 };
@@ -102,6 +112,9 @@ html
   padding: 0
   font-size: 1.6rem
   box-sizing: border-box
+  text-decoration: none
+  list-style: none
+  color: #333333
 .main-wrapper
   background: url("@/assets/image/header-bg.jpg") center / cover no-repeat
   min-height: 100vh
@@ -109,32 +122,38 @@ html
   max-width: 144rem
   margin: 0 auto
   padding: 2rem 3.4rem
+  position: relative
+  min-height: 100vh
 .header
   display: flex
   flex-direction: column
   justify-content: space-between
   position: fixed
-  height: 80vh
+  height: 95vh
+  &__vertical-menu
+    max-width: 15.2rem
   &__info
     display: flex
-    transform: rotate(270deg)
-    justify-content: flex-start
+    flex-direction: column
     align-items: center
+    width: 2.1rem
+    margin-left: -1rem
+    font-size: 2rem
     & svg
-      transform: rotate(90deg)
       display: block
-      width: .6rem
       height: 6.4rem
+      padding-top: 1rem
     & span
       display: block
       font-size: 1.4rem
-      margin-left: 3.5rem
+      writing-mode: vertical-rl
+      transform: rotate(180deg)
   &__slider
     width: 12.2rem
     height: 16.1rem
     & img
       width: 100%
-  &__menu
+  &__burger
     width: 2rem
     height: 1.6rem
     cursor: pointer
@@ -149,4 +168,24 @@ html
     line-height: 7.2rem
     text-transform: uppercase
     color: #FFCC64
+    margin-bottom: 3.4rem
+.footer
+  position: absolute
+  top: 50%
+  right: 0
+  padding: 0 3rem
+  &-container
+  &__link
+    writing-mode: vertical-lr
+    transform: rotate(0deg)
+.vertical-menu-list__item
+  min-width: .8rem
+  position: relative
+  margin-bottom: 5rem
+  text-decoration: underline
+  text-underline-offset: .7rem
+  font-size: 2rem
+.bold
+  font-weight: bold
+  font-size: 2.2rem
 </style>

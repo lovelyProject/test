@@ -25,8 +25,9 @@
           </ul>
         </nav>
         <div class="header__info">
-          <span>Листайте вниз</span>
+          <span class="header__info-item">Скрольте вниз</span>
           <svg
+            class="header__info-item"
             viewBox="0 0 6 64"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -40,18 +41,29 @@
         </div>
       </header>
       <main class="main">
+        <img
+          src="@/assets/image/cloud-top-left.png"
+          class="main__item cloud cloud-top-left-1"
+          alt=""
+        />
+        <img
+          src="@/assets/image/cloud-top-left.png"
+          class="main__item cloud cloud-top-left-2"
+          alt=""
+        />
+        <img
+          src="@/assets/image/cloud-top-left.png"
+          class="main__item cloud cloud-top-left-3"
+          alt=""
+        />
         <div class="main__logo">
           <img
             class="main__logo-item"
             src="@/assets/image/logo.png"
             alt="cloud"
           />
-          <img
-            src="@/assets/image/cloud-top-left.png"
-            class="main__item cloud cloud-top-left"
-            alt=""
-          />
         </div>
+        <div class="main__title-container"></div>
         <h1 class="main__title">ОНИ ДОЛЖНЫ ЧТО-ТО ЗНАТЬ</h1>
         <div class="main__content">
           <img
@@ -71,8 +83,33 @@
             alt="cloud"
           />
           <img
+            src="@/assets/image/cloud-bottom-left.png"
+            class="cloud-bottom-left-3 cloud"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-left.png"
+            class="cloud-bottom-left-4 cloud"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-left.png"
+            class="cloud-bottom-left-5 cloud"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-left.png"
+            class="cloud-bottom-left-6 cloud"
+            alt="cloud"
+          />
+          <img
             src="@/assets/image/cloud-bottom-middle.png"
             class="cloud cloud-bottom-middle"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-middle.png"
+            class="cloud cloud-bottom-middle-2"
             alt="cloud"
           />
           <img
@@ -83,6 +120,11 @@
           <img
             src="@/assets/image/cloud-bottom-right.png"
             class="cloud cloud-bottom-right-2"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-right.png"
+            class="cloud cloud-bottom-right-3"
             alt="cloud"
           />
         </div>
@@ -144,6 +186,7 @@ export default {
 };
 </script>
 <style lang="sass">
+@import url(@/assets/main.css)
 html
   font-size: 201%
 *, ::after, ::before
@@ -153,7 +196,9 @@ html
   box-sizing: border-box
   text-decoration: none
   list-style: none
-  color: #000
+  color: #333
+  font-family: Kinopoisk
+  font-weight: 400
 .main-wrapper
   background: url("@/assets/image/header-bg.jpg") center / cover no-repeat
   min-height: 100vh
@@ -169,6 +214,7 @@ html
   justify-content: space-between
   position: fixed
   height: 100vh
+  z-index: 1
   &__vertical-menu
     max-width: 15.2rem
     font-size: 1.4rem
@@ -204,9 +250,9 @@ html
   flex-direction: column
   justify-content: space-between
   min-height: 100vh
+  position: relative
   &__content
     position: relative
-    overflow: hidden
     padding-bottom: 8.2rem
   &__logo
     position: relative
@@ -219,9 +265,12 @@ html
     line-height: 7.2rem
     text-transform: uppercase
     color: #FFCC64
+    position: relative
+    z-index: 1
+    font-family: Futura
 .footer
   position: fixed
-  top: 50%
+  top: 42%
   right: 0
   margin-right: 3rem
   z-index: 6
@@ -251,17 +300,48 @@ html
         width: 60rem
         top: 20%
         left: 10%
+      &-3
+        width: 60rem
+        left: 18%
+        top: -4%
+      &-4
+        width: 60rem
+        top: 26%
+        left: -9%
+      &-5
+        width: 60rem
+        top: 3%
+      &-6
+        width: 103rem
+        top: -40%
+        left: -17%
     &-middle
       top: 68%
       left: 15%
+      &-2
+        top: 48%
+        left: 40%
     &-right
       top: 57%
       left: 33%
       &-2
         top: 57%
         left: 60%
-  &-top-left
-    left: 25rem
+      &-3
+        width: 110rem
+        left: 35%
+        top: 23%
+  &-top-left-1
+    width: 100rem
+    top: -28%
+  &-top-left-2
+    width: 100rem
+    top: -28%
+    left: 21%
+  &-top-left-3
+    width: 100rem
+    top: -28%
+    left: -26%
   &-middle-left
     top: 10%
     left: 75rem
@@ -291,17 +371,34 @@ html
     font-size: 63%
 @media (max-width: 1200px)
   html
-    font-size: 60%
+    font-size: 53%
 @media (max-width: 1140px)
   html
-    font-size: 55%
+    font-size: 50%
 @media (max-width: 1050px)
   html
-    font-size: 50%
+    font-size: 48%
 @media (max-width: 950px)
   html
     font-size: 45%
 @media (max-width: 900px)
   .wrapper
     height: auto
+  html
+    font-size: 39%
+@media (max-width: 760px)
+  .wrapper
+    height: auto
+  html
+    font-size: 35%
+@media (max-width: 669px)
+  .wrapper
+    height: auto
+  html
+    font-size: 30%
+@media (max-width: 565px)
+  .wrapper
+    height: auto
+  html
+    font-size: 25%
 </style>

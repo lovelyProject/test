@@ -35,6 +35,7 @@ export default {
         position: absolute
         top: 60%
         left: 5%
+        font-weight: 500
         z-index: 4
     &__photo
         width: 40%

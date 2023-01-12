@@ -12,13 +12,32 @@
         :index="index"
         :direction="direction"
       />
-      <vCarouselControls
-        @prevSlide="prevSlide"
-        @nextSlide="nextSlide"
-        :currentSlide="currentSlide"
-      />
-      <a href="#" class="v-carousel__btn"
-        ><span>Искать промокод</span>
+      <a
+        v-show="currentSlide != 0"
+        class="carousel-control prev-slide"
+        @click="prevSlide"
+        ><svg viewBox="0 0 17 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.963876 2.38841L16.1642 2.38841" stroke="#333333" />
+          <path
+            d="M14.4482 4.08231L16.1689 2.3616L14.4482 0.670764"
+            stroke="#333333"
+          /></svg
+      ></a>
+      <a
+        class="carousel-control next-slide"
+        @click="nextSlide"
+        v-show="currentSlide != 7"
+      >
+        <svg viewBox="0 0 17 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.963876 2.38841L16.1642 2.38841" stroke="#333333" />
+          <path
+            d="M14.4482 4.08231L16.1689 2.3616L14.4482 0.670764"
+            stroke="#333333"
+          />
+        </svg>
+      </a>
+      <button href="#" class="v-carousel__btn">
+        <span>Искать промокод</span>
         <svg
           class="btn-arrow"
           viewBox="0 0 28 5"
@@ -31,18 +50,16 @@
             stroke="#333333"
           />
         </svg>
-      </a>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 import vCarouselItem from "@/components/carousel/v-carousel-item.vue";
-import vCarouselControls from "@/components/carousel/v-carousel-controls.vue";
 export default {
   components: {
     vCarouselItem,
-    vCarouselControls,
   },
   props: ["slides"],
   data() {
@@ -74,8 +91,8 @@ export default {
     &__counter
         position: absolute
         left: 49%
-        width: 4rem
-        height: 4rem
+        width: 5.6rem
+        height: 5.6rem
         background-color: #fff
         margin: 0 auto
         border-radius: 50%
@@ -87,14 +104,17 @@ export default {
         & .counter
             font-size: 1.5rem
     &__content
-        margin-top: 5rem
+        margin-top: 7rem
         position: relative
         min-height: 50rem
     &__btn
         position: absolute
         left: 42%
-        top: 88%
-        display: inline-block
+        top: 83%
+        display: flex
+        align-items: center
+        border: none
+        cursor: pointer
         background-color: #fff
         text-decoration: none
         color: #333333
@@ -106,8 +126,34 @@ export default {
         &:hover
             background-color: rgba(0,0,0,.1)
         & span
-            margin-right: .4rem
+            margin-right: 2rem
 .btn-arrow
     width: 2.8rem
     height: .5rem
+.carousel-control
+  border: .1rem solid rgba(51,51,51,1)
+  border-radius: 50%
+  width: 4rem
+  height: 4rem
+  display: inline-block
+  position: absolute
+  top: 0
+  cursor: pointer
+  z-index: 2
+  display: flex
+  justify-content: center
+  align-items: center
+  & svg
+    width:1.7rem
+    height:.5rem
+  &:hover
+    background-color: #fff
+.prev-slide
+  position: absolute
+  top: 27%
+  transform: rotate(180deg)
+.next-slide
+  position: absolute
+  top: 27%
+  right: 0
 </style>

@@ -41,11 +41,45 @@
       </header>
       <main class="main">
         <div class="main__logo">
-          <img src="@/assets/image/logo.png" alt="" />
+          <img
+            class="main__logo-item"
+            src="@/assets/image/logo.png"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-top-left.png"
+            class="main__item cloud cloud-top-left"
+            alt=""
+          />
         </div>
         <div class="main__content">
+          <img
+            src="@/assets/image/cloud-middle-right.png"
+            alt="cloud"
+            class="main__item cloud cloud-middle-left"
+          />
           <h1 class="main__title">ОНИ ДОЛЖНЫ ЧТО-ТО ЗНАТЬ</h1>
           <Carousel :slides="slides" />
+          <img
+            src="@/assets/image/cloud-bottom-left.png"
+            class="cloud-bottom-left cloud"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-middle.png"
+            class="cloud cloud-bottom-middle"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-right.png"
+            class="cloud cloud-bottom-right"
+            alt="cloud"
+          />
+          <img
+            src="@/assets/image/cloud-bottom-right.png"
+            class="cloud cloud-bottom-right-2"
+            alt="cloud"
+          />
         </div>
       </main>
       <footer class="footer">
@@ -114,14 +148,14 @@ html
   box-sizing: border-box
   text-decoration: none
   list-style: none
-  color: #333333
+  color: #000
 .main-wrapper
   background: url("@/assets/image/header-bg.jpg") center / cover no-repeat
   min-height: 100vh
 .wrapper
   max-width: 144rem
   margin: 0 auto
-  padding: 2rem 3.4rem
+  padding: 2rem 0 0 3.4rem
   position: relative
   min-height: 100vh
 .header
@@ -159,9 +193,14 @@ html
     cursor: pointer
 .main
   text-align: center
-  &__logo img
-    width: 18.2rem
-    margin-bottom: 2.4rem
+  &__content
+    position: relative
+    overflow: hidden
+  &__logo
+    position: relative
+    &-item
+      width: 18.2rem
+      margin-bottom: 2.4rem
   &__title
     font-weight: 700
     font-size: 4.5rem
@@ -173,7 +212,8 @@ html
   position: absolute
   top: 50%
   right: 0
-  padding: 0 3rem
+  margin-right: 3rem
+  z-index: 6
   &-container
   &__link
     writing-mode: vertical-lr
@@ -188,4 +228,27 @@ html
 .bold
   font-weight: bold
   font-size: 2.2rem
+.cloud
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 0
+  &-bottom
+    &-left
+      top: 20rem
+    &-middle
+      left: 24rem
+      top: 30rem
+    &-right
+      left: 60rem
+      top: 30rem
+      &-2
+        left: 100rem
+        top: 40rem
+        z-index: 1
+  &-top-left
+    left: 25rem
+  &-middle-left
+    top: 10%
+    left: 75rem
 </style>

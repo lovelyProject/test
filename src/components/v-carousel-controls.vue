@@ -27,7 +27,7 @@
     position: absolute
     top: 0
     cursor: pointer
-    z-index: 2
+    z-index: 20
     display: flex
     justify-content: center
     align-items: center

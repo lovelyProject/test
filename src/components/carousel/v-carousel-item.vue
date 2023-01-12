@@ -19,7 +19,6 @@ export default {
 
 <style lang="sass">
 .v-carousel-item
-    margin-bottom: 1.8rem
     position: absolute
     top: 0
     left: 0
@@ -36,6 +35,7 @@ export default {
         position: absolute
         top: 60%
         left: 5%
+        z-index: 4
     &__photo
         width: 40%
 .right-enter-active

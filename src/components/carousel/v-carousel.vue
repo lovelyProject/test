@@ -71,7 +71,6 @@ export default {
     position: relative
     overflow: hidden
     min-height: 50rem
-    border: .1rem solid #333
     &__counter
         position: absolute
         left: 49%
@@ -103,6 +102,9 @@ export default {
         box-shadow: 0 .5rem 2.6rem rgba(11, 75, 92, 0.0975713)
         border-radius: .8rem
         align-items: center
+        z-index: 6
+        &:hover
+            background-color: rgba(0,0,0,.1)
         & span
             margin-right: .4rem
 .btn-arrow

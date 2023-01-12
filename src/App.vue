@@ -52,13 +52,13 @@
             alt=""
           />
         </div>
+        <h1 class="main__title">ОНИ ДОЛЖНЫ ЧТО-ТО ЗНАТЬ</h1>
         <div class="main__content">
           <img
             src="@/assets/image/cloud-middle-right.png"
             alt="cloud"
             class="main__item cloud cloud-middle-left"
           />
-          <h1 class="main__title">ОНИ ДОЛЖНЫ ЧТО-ТО ЗНАТЬ</h1>
           <Carousel :slides="slides" />
           <img
             src="@/assets/image/cloud-bottom-left.png"
@@ -161,7 +161,7 @@ html
   margin: 0 auto
   padding: 2rem 0 0 3.4rem
   position: relative
-  min-height: 100vh
+  height: 100vh
   overflow: hidden
 .header
   display: flex
@@ -207,6 +207,7 @@ html
   &__content
     position: relative
     overflow: hidden
+    padding-bottom: 8.2rem
   &__logo
     position: relative
     &-item
@@ -218,7 +219,6 @@ html
     line-height: 7.2rem
     text-transform: uppercase
     color: #FFCC64
-    margin-bottom: 3.4rem
 .footer
   position: fixed
   top: 50%
@@ -246,19 +246,19 @@ html
   width: 50rem
   &-bottom
     &-left
-      top: 43%
+      top: 49%
       &-2
         width: 60rem
-        top: 10%
+        top: 20%
         left: 10%
     &-middle
-      top: 64%
+      top: 68%
       left: 15%
     &-right
-      top: 52%
+      top: 57%
       left: 33%
       &-2
-        top: 52%
+        top: 57%
         left: 60%
   &-top-left
     left: 25rem
@@ -301,4 +301,7 @@ html
 @media (max-width: 950px)
   html
     font-size: 45%
+@media (max-width: 900px)
+  .wrapper
+    height: auto
 </style>

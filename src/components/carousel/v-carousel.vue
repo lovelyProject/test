@@ -71,7 +71,6 @@ export default {
     position: relative
     overflow: hidden
     min-height: 50rem
-    border: .1rem solid black
     &__counter
         position: absolute
         left: 49%

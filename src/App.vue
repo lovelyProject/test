@@ -66,6 +66,11 @@
             alt="cloud"
           />
           <img
+            src="@/assets/image/cloud-bottom-left.png"
+            class="cloud-bottom-left-2 cloud"
+            alt="cloud"
+          />
+          <img
             src="@/assets/image/cloud-bottom-middle.png"
             class="cloud cloud-bottom-middle"
             alt="cloud"
@@ -140,7 +145,7 @@ export default {
 </script>
 <style lang="sass">
 html
-  font-size: 62.5%
+  font-size: 201%
 *, ::after, ::before
   margin: 0
   padding: 0
@@ -153,25 +158,27 @@ html
   background: url("@/assets/image/header-bg.jpg") center / cover no-repeat
   min-height: 100vh
 .wrapper
-  max-width: 144rem
   margin: 0 auto
   padding: 2rem 0 0 3.4rem
   position: relative
   min-height: 100vh
+  overflow: hidden
 .header
   display: flex
   flex-direction: column
   justify-content: space-between
   position: fixed
-  height: 95vh
+  height: 100vh
   &__vertical-menu
     max-width: 15.2rem
+    font-size: 1.4rem
   &__info
     display: flex
     flex-direction: column
     align-items: center
     width: 2.1rem
     margin-left: -1rem
+    margin-bottom: 3rem
     font-size: 2rem
     & svg
       display: block
@@ -193,6 +200,10 @@ html
     cursor: pointer
 .main
   text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100vh
   &__content
     position: relative
     overflow: hidden
@@ -209,7 +220,7 @@ html
     color: #FFCC64
     margin-bottom: 3.4rem
 .footer
-  position: absolute
+  position: fixed
   top: 50%
   right: 0
   margin-right: 3rem
@@ -227,28 +238,67 @@ html
   font-size: 2rem
 .bold
   font-weight: bold
-  font-size: 2.2rem
 .cloud
   position: absolute
   top: 0
   left: 0
   z-index: 0
+  width: 50rem
   &-bottom
     &-left
-      top: 20rem
-    &-middle
-      left: 24rem
-      top: 30rem
-    &-right
-      left: 60rem
-      top: 30rem
+      top: 43%
       &-2
-        left: 100rem
-        top: 40rem
-        z-index: 1
+        width: 60rem
+        top: 10%
+        left: 10%
+    &-middle
+      top: 64%
+      left: 15%
+    &-right
+      top: 52%
+      left: 33%
+      &-2
+        top: 52%
+        left: 60%
   &-top-left
     left: 25rem
   &-middle-left
     top: 10%
     left: 75rem
+@media (max-width: 3800px)
+  html
+    font-size: 200%
+@media (max-width: 3200px)
+  html
+    font-size: 150%
+@media (max-width: 2600px)
+  html
+    font-size: 130%
+@media (max-width: 2200px)
+  html
+    font-size: 100%
+@media (max-width: 1900px)
+  html
+    font-size: 90%
+@media (max-width: 1712px)
+  html
+    font-size: 85%
+@media (max-width: 1621px)
+  html
+    font-size: 75%
+@media (max-width: 1422px)
+  html
+    font-size: 63%
+@media (max-width: 1200px)
+  html
+    font-size: 60%
+@media (max-width: 1140px)
+  html
+    font-size: 55%
+@media (max-width: 1050px)
+  html
+    font-size: 50%
+@media (max-width: 950px)
+  html
+    font-size: 45%
 </style>

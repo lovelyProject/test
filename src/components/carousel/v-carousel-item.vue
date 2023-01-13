@@ -33,7 +33,7 @@ export default {
         line-height: 3.2rem
         letter-spacing: 0.4px
         position: absolute
-        top: 60%
+        top: 53%
         left: 5%
         font-weight: 500
         z-index: 4

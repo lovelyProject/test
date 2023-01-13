@@ -110,7 +110,7 @@ export default {
     &__btn
         position: absolute
         left: 42%
-        top: 83%
+        top: 77%
         display: flex
         align-items: center
         border: none
